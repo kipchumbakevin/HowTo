@@ -5,16 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 public class BuySell extends AppCompatActivity {
     TextView busell;
+    Animation bounce;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_sell);
         busell = findViewById(R.id.buysell);
-
+        bounce = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.bounce);
+        busell.startAnimation(bounce);
         busell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
