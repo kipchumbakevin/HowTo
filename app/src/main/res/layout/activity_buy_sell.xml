@@ -10,6 +10,7 @@
     android:background="@color/colorDont"
     tools:context=".BuySell">
     <TextView
+        android:id="@+id/title"
         android:textSize="20sp"
         android:drawableStart="@drawable/ic_money"
         android:drawableEnd="@drawable/ic_money"
@@ -44,6 +45,7 @@
             android:id="@+id/hh"
             android:layout_height="wrap_content">
             <ImageView
+                android:id="@+id/imageview"
                 android:layout_width="400dp"
                 android:layout_height="100dp"
                 android:scaleType="fitXY"

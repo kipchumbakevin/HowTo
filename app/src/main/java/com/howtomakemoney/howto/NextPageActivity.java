@@ -6,12 +6,15 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
 public class NextPageActivity extends AppCompatActivity {
     LinearLayoutCompat sellprogramming,instagram,affiliatewebsite,resellhosting,sellyours,
             jobboard,survey,socialmedia,graphic;
     RelativeLayout websitedeveloper;
+    Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +29,24 @@ public class NextPageActivity extends AppCompatActivity {
         survey = findViewById(R.id.survey);
         socialmedia = findViewById(R.id.socialmedia);
         graphic = findViewById(R.id.graphic);
+        animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
+
+        sellprogramming.startAnimation(animation);
+        websitedeveloper.startAnimation(animation);
+        affiliatewebsite.startAnimation(animation);
+        instagram.startAnimation(animation);
+        resellhosting.startAnimation(animation);
+        sellyours.startAnimation(animation);
+        jobboard.startAnimation(animation);
+        survey.startAnimation(animation);
+        socialmedia.startAnimation(animation);
+        graphic.startAnimation(animation);
 
         sellprogramming.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",7);
+                intent.putExtra("INTENT",Integer.toString(7));
                 startActivity(intent);
                 finish();
             }
@@ -40,7 +55,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",9);
+                intent.putExtra("INTENT",Integer.toString(9));
                 startActivity(intent);
                 finish();
             }
@@ -49,7 +64,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",11);
+                intent.putExtra("INTENT",Integer.toString(11));
                 startActivity(intent);
                 finish();
             }
@@ -58,7 +73,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",14);
+                intent.putExtra("INTENT",Integer.toString(14));
                 startActivity(intent);
                 finish();
             }
@@ -67,7 +82,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",15);
+                intent.putExtra("INTENT",Integer.toString(15));
                 startActivity(intent);
                 finish();
             }
@@ -76,7 +91,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",12);
+                intent.putExtra("INTENT",Integer.toString(12));
                 startActivity(intent);
                 finish();
             }
@@ -85,7 +100,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",13);
+                intent.putExtra("INTENT",Integer.toString(13));
                 startActivity(intent);
                 finish();
             }
@@ -94,7 +109,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",10);
+                intent.putExtra("INTENT",Integer.toString(10));
                 startActivity(intent);
                 finish();
             }
@@ -103,7 +118,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",8);
+                intent.putExtra("INTENT",Integer.toString(8));
                 startActivity(intent);
                 finish();
             }
@@ -112,7 +127,7 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",16);
+                intent.putExtra("INTENT",Integer.toString(16));
                 startActivity(intent);
                 finish();
             }

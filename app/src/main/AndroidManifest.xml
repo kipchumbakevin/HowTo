@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TransitionActivity"></activity>
+        <activity android:name=".TransitionActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Graphic"
             android:theme="@style/AppTheme.NoActionBar" />

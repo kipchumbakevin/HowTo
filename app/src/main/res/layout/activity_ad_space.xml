@@ -10,6 +10,7 @@
     android:layout_height="match_parent"
     tools:context=".AdSpaceActivity">
     <TextView
+        android:id="@+id/title"
         android:textSize="20sp"
         android:drawableStart="@drawable/ic_money"
         android:drawableEnd="@drawable/ic_money"
@@ -35,7 +36,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Website"/>
-
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/card"
+            android:layout_below="@id/site"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sellads1" />
+        </androidx.cardview.widget.CardView>
         <TextView
             android:id="@+id/blog"
             android:layout_marginTop="5dp"
@@ -45,7 +59,7 @@
             android:drawableStart="@drawable/ic_money"
             android:drawableEnd="@drawable/ic_money"
             android:gravity="center"
-            android:layout_below="@id/site"
+            android:layout_below="@id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Blog"/>

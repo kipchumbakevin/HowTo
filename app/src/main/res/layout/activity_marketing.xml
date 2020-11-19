@@ -10,6 +10,7 @@
     android:layout_height="match_parent"
     tools:context=".MarketingActivity">
     <TextView
+        android:id="@+id/title"
         android:textSize="20sp"
         android:drawableStart="@drawable/ic_money"
         android:drawableEnd="@drawable/ic_money"
@@ -35,7 +36,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Social media "/>
-
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/social"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/card"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageview"
+                android:src="@drawable/marketing" />
+        </androidx.cardview.widget.CardView>
         <TextView
             android:id="@+id/affiliate"
             android:layout_marginTop="5dp"
@@ -45,7 +60,7 @@
             android:drawableStart="@drawable/ic_money"
             android:drawableEnd="@drawable/ic_money"
             android:gravity="center"
-            android:layout_below="@id/social"
+            android:layout_below="@id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Affiliate"/>

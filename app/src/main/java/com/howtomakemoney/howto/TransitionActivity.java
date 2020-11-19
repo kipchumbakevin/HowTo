@@ -5,14 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TransitionActivity extends AppCompatActivity {
     TextView title,desc,shortd;
     ImageView imageView;
-    int i = 0;
-
+    int i,t = 0;
+    Animation bounce,animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,16 @@ public class TransitionActivity extends AppCompatActivity {
         imageView = findViewById(R.id.image);
         shortd = findViewById(R.id.buysell);
         i = Integer.parseInt(getIntent().getExtras().getString("INTENT"));
+        if (getIntent().hasExtra("GOBACK")){
+            t = Integer.parseInt(getIntent().getExtras().getString("GOBACK"));
+        }
+        bounce = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.bounce);
+        animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
+        title.startAnimation(animation);
+        imageView.startAnimation(animation);
+        desc.startAnimation(bounce);
+        shortd.startAnimation(bounce);
         populate();
 
         shortd.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +82,7 @@ public class TransitionActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }else if (i == 10){
-            Intent intent = new Intent(TransitionActivity.this,Affiliate.class);
+            Intent intent = new Intent(TransitionActivity.this,AffiliateWebsite.class);
             startActivity(intent);
             finish();
         }else if (i == 11){
@@ -182,6 +194,19 @@ public class TransitionActivity extends AppCompatActivity {
             desc.setText("Use this skill to start making money online.");
             imageView.setImageResource(R.drawable.graphicdesigner);
             shortd.setText("Graphic design");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (t == 2){
+            Intent intent = new Intent(TransitionActivity.this,MainActivity.class);
+            startActivity(intent);
+            finish();
+        }else {
+            Intent intent = new Intent(TransitionActivity.this,NextPageActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 }

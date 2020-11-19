@@ -2,21 +2,29 @@ package com.howtomakemoney.howto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class ResellWebhosting extends AppCompatActivity {
-    TextView howto;
+    TextView howto,message;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resell_webhosting);
         howto = findViewById(R.id.howto);
+        message = findViewById(R.id.meso);
 
+        setText(getString(R.string.resellhost));
         howto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +44,31 @@ public class ResellWebhosting extends AppCompatActivity {
             }
         });
     }
+    public void setText(final String s){
+        final int[]i = new int[1];
+        final int length = s.length();
+        @SuppressLint("HandlerLeak") final Handler handler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                char c = s.charAt(i[0]);
+                message.append(String.valueOf(c));
+                i[0]++;
 
+            }
+        };
+        final Timer timer = new Timer();
+        TimerTask taskEverySplitSecond = new TimerTask() {
+            @Override
+            public void run() {
+                handler.sendEmptyMessage(0);
+                if (i[0] == length-1){
+                    timer.cancel();
+                }
+            }
+        };
+        timer.schedule(taskEverySplitSecond,1,20);
+    }
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(ResellWebhosting.this,NextPageActivity.class);

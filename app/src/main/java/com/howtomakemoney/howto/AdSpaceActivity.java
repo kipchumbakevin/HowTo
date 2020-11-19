@@ -7,19 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AdSpaceActivity extends AppCompatActivity {
-    TextView site,blog;
-    Animation bounce;
+    TextView site,blog,title;
+    Animation bounce,animation;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad_space);
         site = findViewById(R.id.site);
+        title = findViewById(R.id.title);
         blog = findViewById(R.id.blog);
+        imageView = findViewById(R.id.imageview);
         bounce = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.bounce);
+        animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
+        title.startAnimation(animation);
+        imageView.startAnimation(animation);
         site.startAnimation(bounce);
         blog.startAnimation(bounce);
         site.setOnClickListener(new View.OnClickListener() {

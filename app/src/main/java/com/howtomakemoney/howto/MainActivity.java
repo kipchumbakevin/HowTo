@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         insurance.startAnimation(animation);
         sellads.startAnimation(animation);
         marketing.startAnimation(animation);
+        ecommerce.startAnimation(animation);
+        digitalcourse.startAnimation(animation);
+        directory.startAnimation(animation);
+        membershipsite.startAnimation(animation);
+        buysellwebsites.startAnimation(animation);
+        youtube.startAnimation(animation);
 
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",1);
+                intent.putExtra("INTENT",Integer.toString(1));
+                intent.putExtra("GOBACK",Integer.toString(2));
                 startActivity(intent);
                 finish();
             }
@@ -65,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",3);
+                intent.putExtra("INTENT",Integer.toString(3));
+                intent.putExtra("GOBACK",Integer.toString(2));
                 startActivity(intent);
                 finish();
             }
@@ -74,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",2);
+                intent.putExtra("INTENT",Integer.toString(2));
+                intent.putExtra("GOBACK",Integer.toString(2));
                 startActivity(intent);
                 finish();
             }
@@ -83,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",5);
+                intent.putExtra("INTENT",Integer.toString(5));
+                intent.putExtra("GOBACK",Integer.toString(2));
                 startActivity(intent);
                 finish();
             }
@@ -124,7 +134,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",4);
+                intent.putExtra("INTENT",Integer.toString(4));
+                intent.putExtra("GOBACK",Integer.toString(2));
                 startActivity(intent);
                 finish();
             }
@@ -133,7 +144,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",6);
+                intent.putExtra("INTENT",Integer.toString(6));
+                intent.putExtra("GOBACK",Integer.toString(2));
                 startActivity(intent);
                 finish();
             }
