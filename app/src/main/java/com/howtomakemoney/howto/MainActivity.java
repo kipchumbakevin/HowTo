@@ -60,6 +60,22 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        membershipsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,MembershipSite.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        digitalcourse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,DigitalCourse.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         bitcoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,MarketingActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        directory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,OnlineDirectory.class);
                 startActivity(intent);
                 finish();
             }

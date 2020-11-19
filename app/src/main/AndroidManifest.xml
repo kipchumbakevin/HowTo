@@ -11,7 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DigitalCourse"></activity>
+        <activity android:name=".Youtube"></activity>
+        <activity android:name=".BuySellWebsites" />
+        <activity android:name=".OnlineDirectory" />
+        <activity android:name=".MembershipSite" />
+        <activity android:name=".DigitalCourse" />
         <activity android:name=".EcommerceActivity" />
         <activity
             android:name=".FreeBitcoinActivity"

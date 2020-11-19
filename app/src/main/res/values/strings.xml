@@ -61,4 +61,39 @@ Purchasing cheaper goods manufactured in foreign countries, repackaging them, an
     The first approach can be very successful, but it does require a passion for the product and the willingness to do a ton of research, product development, and testing.
     \nIf the first approach seems a little risky for your first online business, then you might consider the second option of reselling popular overseas products. This method involves sourcing a popular product from a platform like AliExpress, 
         repacking the product, and selling it through your own storefront.</string>
+    <string name="digital">It seems like digital courses are everywhere today. So, if you have valuable knowledge that someone would pay for, this could be a great opportunity.\n
+In addition to having your own courses, learning platforms such as BitDegree offer a chance to become an instructor.
+        Its a unique opportunity to pass your skills and experience to thousands of people who are eager to learn something new.\n
+    Digital courses can be produced in a lot of different formats, from simple PDF downloads, all the way up to self-produced video courses that have dozens of hours of content.
+    \nIf you’re looking to create a digital course, but haven’t settled on your topic, its a good idea to poll your audience. Often, they can tell you exactly what they’d like to learn and would be willing to pay for.
+    \nLike most other methods on this list, digital courses can be integrated into most styles of websites including blogs,
+        eCommerce platforms, and even affiliate marketing sites.</string>
+    <string name="membership">Membership sites have exploded in popularity recently and the idea is easy enough to implement. It does, however, require having an existing audience of some sort.\n
+For example, Mark Manson runs a popular self-development blog. On his site, there’s a membership portion that gives users access to online courses, videos, and additional article commentary.
+        For fans of his work, it’s a great deal.\n
+    People are already visiting your website because they like what you write about and how you use your style.
+        So, you can create a membership section of your site that offers premium content. Now, every single person who visits your site won’t take you up on the offer, but your dedicated fans will find it irresistible.
+    The type of membership site you create will depend upon the kind of site you run and the level of depth you want to go with your premium content.
+    </string>
+    <string name="online">Online directories aren’t as popular as they used to be, but they can still be profitable.
+
+They work in a similar fashion to the job board above. But, instead of people paying to post jobs, or get access to the job board, they’ll pay you a monthly fee for a directory listing.
+    \nIf you have an authoritative site or get a lot of traffic, then these listings are pretty valuable.
+
+Lets say you run a site thats dedicated to web development and design. You produce high-quality content and have a solid amount of authority. You could create a directory portion of your site where web developers and agencies can purchase a listing.
+
+This will not only provide them with a solid authoritative backlink, but it could be a nice source of traffic for their business.
+    Usually, directories work by charging a monthly subscription fee to be listed. You could even charge a premium fee to let businesses list themselves at the top of the directory, 
+        getting even more eyes on their listing.</string>
+    <string name="buysell">The process of buying and selling websites is like the process of flipping homes — you buy a house that has investment potential,
+        fix it up, and sell it for a higher profit.\n
+    The process is pretty straightforward. But, just know that there are risks involved.
+        So, dont invest money in a site you can’t afford to lose.\n
+    Here’s how you buy and sell sites for a profit:\n
+You find an undervalued website that you know you can improve. For this, check out marketplaces like EmpireFlippers,
+        Flippa, and We Sell Your Site.\n
+    Do your research to uncover revenue and traffic numbers, link profiles, and the real reason why someone is selling the site.\n
+    If everything checks out, purchase the site.\n
+    Make site improvements to maximize its traffic and revenue.\n
+        Sell the site for a better profit.</string>
 </resources>
