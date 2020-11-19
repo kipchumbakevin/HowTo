@@ -96,4 +96,50 @@ You find an undervalued website that you know you can improve. For this, check o
     If everything checks out, purchase the site.\n
     Make site improvements to maximize its traffic and revenue.\n
         Sell the site for a better profit.</string>
+    <string name="youtube">YouTube is one of the world’s largest search engines. But, instead of searching for websites, people are looking for entertaining, fun, or informative videos.\n
+You can monetize your YouTube channel by using their advertising system or sending your viewers to a website you’ve monetized in another way.
+You can think of building a YouTube channel in a similar fashion to creating a website, except you’re creating videos, not written content.
+    If you feel comfortable in front of the camera, and want to try your luck creating videos, then you’ll need to figure out what your channel will be about. Typically, there are two types of
+        YouTube channels out there that are most successful:\n
+    Entertaining content. This style includes content like web series, comedy videos, pranks, reviews, video game walkthroughs, and a lot more.\n
+Educational content. This style is more geared towards, “How to” phrases.
+        If you have useful skills or information you want to convey through a video, then this is a solid option for you.\n
+    Once you’ve decided what kind of channel you’re going to start, it’s time to start creating.</string>
+    <string name="program">Learning how to program can be a very valuable skill. Whether you’re looking to freelance with your skills or develop and build your own software.
+Once you have enough skills under your belt, you can perform such tasks as building a consumer application,
+        a niche web or mobile app, or even a mobile game.
+        A lot of very successful businesses have been built on the back of software.\n
+    A lot of today’s software is built by larger companies, but, if you look through the Google Play or Apple Store,
+        you’ll find that a lot of the most popular apps have been built by people just like you.
+    If you’re looking to make money off your own software or apps, here’s an approach you can take:\n
+
+Do market research to uncover what is currently needed the most\n
+Build an MVP version of the software\n
+Get feedback from initial users and beta testers\n
+Integrate feedback and launch the first version of your product\n
+Prepare a marketing campaign based on your budget</string>
+    <string name="webdev">If you don’t have the development skills, then your first step is to learn how to code. Once you have the skills, it’s time to start finding work.
+
+Create a profile on sites like Upwork and Freelancer, and start pitching jobs to get paid.\n
+
+To increase your chances of success it can be helpful to create a niche for yourself, and craft your profile and portfolio accordingly.\n
+
+For example, maybe you want to build websites for real estate agents and property management companies. Or, you’d like to specialize in creating eCommerce websites that use WooCommerce and WordPress.\n
+
+First, make sure there’s a need for your skills, maybe there are a lot of jobs posted for your specific skillset. Then, craft your niche web development business and start pitching relevant jobs.</string>
+    <string name="ig">Instagram is one of the fastest-growing social media platforms out there. However, did you know you can make money directly from Instagram, just by having a big enough following?
+
+It’s becoming more difficult to build a large following on Instagram, but it can be a pretty easy way to earn a nice living online. Large brands and other companies will actually pay you just to do a post about their company, or showcase one of their products.\n
+
+Usually, how much you make per post will depend on the size of your followers, and how engaged they are. You can expect to earn anywhere from a couple hundred to multiple thousands of dollars per post.\n
+
+Building a sizable Instagram audience will take time, but if you love taking photos, don’t mind spending a lot of time on your phone, and are dedicated to posting regularly, then it’s worth a shot.</string>
+    <string name="affweb">An affiliate marketing site is built upon recommending or reviewing certain products. Then, when a reader buys that product through your link, you’ll receive a commission.
+
+Although it might not seem like a big revenue generator, there are multi-million dollar sites based on affiliate revenue alone.\n
+
+For example, Wirecutter was so profitable that the New York Times bought the site for $30 million. There is also Lucieslist, a site about baby product reviews and Outdoorgearlab, a site dedicated to camping and hiking gear reviews.\n
+
+To start your own affiliate marketing website, join an affiliate program that fits your site’s niche. For instance, if you have a blog dedicated to computers and technology, you can become a Hostinger affiliate.\n
+        After signing up for the Hostinger Affiliate Program, you’ll get access to the affiliate marketing dashboard where you can track all of your campaigns. Then, use the provided marketing materials — like banners, ebooks, and infographics — to increase sales.</string>
 </resources>

@@ -116,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Youtube.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         rate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

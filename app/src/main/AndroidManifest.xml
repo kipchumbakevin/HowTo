@@ -11,7 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Youtube"></activity>
+        <activity android:name=".AffiliateWebsite"></activity>
+        <activity android:name=".Instagram" />
+        <activity android:name=".WebDeveloper" />
+        <activity android:name=".SellPrograming" />
+        <activity android:name=".Youtube" />
         <activity android:name=".BuySellWebsites" />
         <activity android:name=".OnlineDirectory" />
         <activity android:name=".MembershipSite" />
