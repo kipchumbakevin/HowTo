@@ -43,6 +43,46 @@ public class NextPageActivity extends AppCompatActivity {
                 finish();
             }
         });
+        resellhosting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NextPageActivity.this,ResellWebhosting.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        survey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NextPageActivity.this,Survey.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        socialmedia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NextPageActivity.this,SocialManage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        sellyours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NextPageActivity.this,YourServices.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        jobboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NextPageActivity.this,JobBoard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         affiliatewebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
