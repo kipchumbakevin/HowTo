@@ -37,4 +37,28 @@
     Bitcoin uses peer-to-peer technology to operate with no central authority or banks managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source its design is public, nobody owns or controls Bitcoin and everyone can take part.
     Digital money thats instant, private, and free from bank fees. Download your desired wallet app and start using Bitcoin today.</string>
     <string name="newt">newt</string>
+    <string name="freebitcoin">Shop Online and Earn Bitcoin\n
+You can do more with bitcoin online than simply purchase things.
+        You can also use your everyday shopping experiences to increase your bitcoin account. How?\n
+    \n
+    Open a Crypto Interest Account to Earn Free Bitcoin\n
+A lot of crypto investors buy Bitcoin as a long-term investment,
+        only to find out that there isnt much else they can do to grow their overall holdings.
+        Let your cryptocurrency do all the work by earning free crypto in the form of interest
+        by storing it in a BlockFi Interest Account (BIA).
+        Of course, the big question is how much interest can you earn?\n
+    \n
+    Start Crypto Mining to Earn Bitcoin
+Crypto mining is another path to earning bitcoin online. But whats crypto mining? Miners are the back-bone of the blockchain.
+        Using specialized hardware, they complete complex calculations in order to confirm and facilitate the exchange of
+        value over the blockchain. Miners test the validity of each transaction by subjecting it to a sophisticated
+        cryptographic puzzle and submitting it for other miners to confirm and come to a
+        trustless consensus on each transaction that hits the blockchain.</string>
+    <string name="ecommerce">eCommerce sites have exploded in popularity in recent years. With the prevalence of platforms like WordPress and WooCommerce, creating an eCommerce site couldn’t be easier.\n
+    There are two different methods of running a successful online store:\n
+Creating and selling a niche physical product to a dedicated group of buyers\n
+Purchasing cheaper goods manufactured in foreign countries, repackaging them, and selling them at a markup.\n
+    The first approach can be very successful, but it does require a passion for the product and the willingness to do a ton of research, product development, and testing.
+    \nIf the first approach seems a little risky for your first online business, then you might consider the second option of reselling popular overseas products. This method involves sourcing a popular product from a platform like AliExpress, 
+        repacking the product, and selling it through your own storefront.</string>
 </resources>

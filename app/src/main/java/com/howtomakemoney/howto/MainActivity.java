@@ -12,12 +12,14 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     RelativeLayout bitcoin;
-    LinearLayoutCompat insurance,sellads,marketing;
+    LinearLayoutCompat insurance,sellads,marketing,ecommerce,digitalcourse,membershipsite,directory,buysellwebsites,youtube;
     CardView share,rate;
     Animation animation;
+    TextView nextpage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
         marketing = findViewById(R.id.marketing);
         share = findViewById(R.id.share);
         rate = findViewById(R.id.rate);
+        nextpage = findViewById(R.id.nextpage);
+        ecommerce = findViewById(R.id.ecommerce);
+        digitalcourse = findViewById(R.id.digitalcourse);
+        membershipsite = findViewById(R.id.membershipsite);
+        directory = findViewById(R.id.onlinedirectory);
+        buysellwebsites = findViewById(R.id.buysellwebsites);
+        youtube = findViewById(R.id.youtube);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
 
         bitcoin.startAnimation(animation);
@@ -35,6 +44,22 @@ public class MainActivity extends AppCompatActivity {
         sellads.startAnimation(animation);
         marketing.startAnimation(animation);
 
+        nextpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,NextPageActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ecommerce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,EcommerceActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         bitcoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

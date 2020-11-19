@@ -11,28 +11,47 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BuySell"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Bitcoin"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Affiliate"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".SocialMedia"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MarketingActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".AgentActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".BrokerActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".InsuranceActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".BlogActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".WebsiteActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".AdSpaceActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".DigitalCourse"></activity>
+        <activity android:name=".EcommerceActivity" />
+        <activity
+            android:name=".FreeBitcoinActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NextPageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BuySell"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bitcoin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Affiliate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SocialMedia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MarketingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AgentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BrokerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InsuranceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BlogActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WebsiteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdSpaceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

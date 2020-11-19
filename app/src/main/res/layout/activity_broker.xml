@@ -20,11 +20,23 @@
         android:textSize="15sp"
         android:textColor="@color/colorWhite"
         android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:id="@+id/learnmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Learn more -->"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/textview"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
     <ScrollView
         android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/title">
+        app:layout_constraintTop_toBottomOf="@id/learnmore">
     <TextView
         android:id="@+id/meso"
         android:drawableTop="@drawable/ic_money"
