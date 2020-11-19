@@ -11,22 +11,55 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Graphic"></activity>
-        <activity android:name=".SocialManage" />
-        <activity android:name=".Survey" />
-        <activity android:name=".YourServices" />
-        <activity android:name=".JobBoard" />
-        <activity android:name=".ResellWebhosting" />
-        <activity android:name=".AffiliateWebsite" />
-        <activity android:name=".Instagram" />
-        <activity android:name=".WebDeveloper" />
-        <activity android:name=".SellPrograming" />
-        <activity android:name=".Youtube" />
-        <activity android:name=".BuySellWebsites" />
-        <activity android:name=".OnlineDirectory" />
-        <activity android:name=".MembershipSite" />
-        <activity android:name=".DigitalCourse" />
-        <activity android:name=".EcommerceActivity" />
+        <activity android:name=".TransitionActivity"></activity>
+        <activity
+            android:name=".Graphic"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SocialManage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Survey"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".YourServices"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".JobBoard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResellWebhosting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AffiliateWebsite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Instagram"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WebDeveloper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SellPrograming"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Youtube"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BuySellWebsites"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OnlineDirectory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MembershipSite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DigitalCourse"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EcommerceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FreeBitcoinActivity"
             android:theme="@style/AppTheme.NoActionBar" />

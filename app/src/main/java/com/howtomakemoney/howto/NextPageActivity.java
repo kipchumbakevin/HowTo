@@ -99,6 +99,14 @@ public class NextPageActivity extends AppCompatActivity {
                 finish();
             }
         });
+        graphic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NextPageActivity.this,Graphic.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
