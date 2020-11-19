@@ -36,4 +36,11 @@ public class BuySellWebsites extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+                Intent intent = new Intent(BuySellWebsites.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+    }
 }

@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
         ecommerce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,EcommerceActivity.class);
+                Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",1);
                 startActivity(intent);
                 finish();
             }
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
         membershipsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,MembershipSite.class);
+                Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",3);
                 startActivity(intent);
                 finish();
             }
@@ -71,7 +73,17 @@ public class MainActivity extends AppCompatActivity {
         digitalcourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,DigitalCourse.class);
+                Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",2);
+                startActivity(intent);
+                finish();
+            }
+        });
+        buysellwebsites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",5);
                 startActivity(intent);
                 finish();
             }
@@ -111,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
         directory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,OnlineDirectory.class);
+                Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",4);
                 startActivity(intent);
                 finish();
             }
@@ -119,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
         youtube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Youtube.class);
+                Intent intent = new Intent(MainActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",6);
                 startActivity(intent);
                 finish();
             }

@@ -30,7 +30,8 @@ public class NextPageActivity extends AppCompatActivity {
         sellprogramming.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,SellPrograming.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",7);
                 startActivity(intent);
                 finish();
             }
@@ -38,7 +39,8 @@ public class NextPageActivity extends AppCompatActivity {
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,Instagram.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",9);
                 startActivity(intent);
                 finish();
             }
@@ -46,7 +48,8 @@ public class NextPageActivity extends AppCompatActivity {
         resellhosting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,ResellWebhosting.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",11);
                 startActivity(intent);
                 finish();
             }
@@ -54,7 +57,8 @@ public class NextPageActivity extends AppCompatActivity {
         survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,Survey.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",14);
                 startActivity(intent);
                 finish();
             }
@@ -62,7 +66,8 @@ public class NextPageActivity extends AppCompatActivity {
         socialmedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,SocialManage.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",15);
                 startActivity(intent);
                 finish();
             }
@@ -70,7 +75,8 @@ public class NextPageActivity extends AppCompatActivity {
         sellyours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,YourServices.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",12);
                 startActivity(intent);
                 finish();
             }
@@ -78,7 +84,8 @@ public class NextPageActivity extends AppCompatActivity {
         jobboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,JobBoard.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",13);
                 startActivity(intent);
                 finish();
             }
@@ -86,7 +93,8 @@ public class NextPageActivity extends AppCompatActivity {
         affiliatewebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,AffiliateWebsite.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",10);
                 startActivity(intent);
                 finish();
             }
@@ -94,7 +102,8 @@ public class NextPageActivity extends AppCompatActivity {
         websitedeveloper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,WebDeveloper.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",8);
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +111,8 @@ public class NextPageActivity extends AppCompatActivity {
         graphic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NextPageActivity.this,Graphic.class);
+                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                intent.putExtra("INTENT",16);
                 startActivity(intent);
                 finish();
             }

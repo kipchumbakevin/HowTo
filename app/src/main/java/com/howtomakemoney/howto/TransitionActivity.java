@@ -2,7 +2,9 @@ package com.howtomakemoney.howto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +23,81 @@ public class TransitionActivity extends AppCompatActivity {
         shortd = findViewById(R.id.buysell);
         i = Integer.parseInt(getIntent().getExtras().getString("INTENT"));
         populate();
+
+        shortd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goOn();
+            }
+        });
+    }
+
+    private void goOn() {
+        if (i == 1){
+            Intent intent = new Intent(TransitionActivity.this,EcommerceActivity.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 2){
+            Intent intent = new Intent(TransitionActivity.this,DigitalCourse.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 3){
+            Intent intent = new Intent(TransitionActivity.this,MembershipSite.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 4){
+            Intent intent = new Intent(TransitionActivity.this,OnlineDirectory.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 5){
+            Intent intent = new Intent(TransitionActivity.this,BuySellWebsites.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 6){
+            Intent intent = new Intent(TransitionActivity.this,Youtube.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 7){
+            Intent intent = new Intent(TransitionActivity.this,SellPrograming.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 8){
+            Intent intent = new Intent(TransitionActivity.this,WebDeveloper.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 9){
+            Intent intent = new Intent(TransitionActivity.this,Instagram.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 10){
+            Intent intent = new Intent(TransitionActivity.this,Affiliate.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 11){
+            Intent intent = new Intent(TransitionActivity.this,ResellWebhosting.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 12){
+            Intent intent = new Intent(TransitionActivity.this,YourServices.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 13){
+            Intent intent = new Intent(TransitionActivity.this,JobBoard.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 14){
+            Intent intent = new Intent(TransitionActivity.this,Survey.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 15){
+            Intent intent = new Intent(TransitionActivity.this,SocialManage.class);
+            startActivity(intent);
+            finish();
+        }else if (i == 16){
+            Intent intent = new Intent(TransitionActivity.this,Graphic.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void populate() {
