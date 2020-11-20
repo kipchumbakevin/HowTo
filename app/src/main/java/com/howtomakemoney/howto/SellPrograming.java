@@ -7,18 +7,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class SellPrograming extends AppCompatActivity {
     TextView message;
+    private AdView adView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sell_programing);
         message = findViewById(R.id.meso);
+
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         setText(getString(R.string.program));
     }
     public void setText(final String s){
@@ -47,6 +63,13 @@ public class SellPrograming extends AppCompatActivity {
         timer.schedule(taskEverySplitSecond,1,20);
     }
 
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(SellPrograming.this,TransitionActivity.class);

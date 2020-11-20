@@ -7,16 +7,31 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 public class FreeBitcoinActivity extends AppCompatActivity {
     TextView learnmore;
+    private AdView adView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_free_bitcoin);
         learnmore = findViewById(R.id.learnmore);
 
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         learnmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,6 +52,13 @@ public class FreeBitcoinActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(FreeBitcoinActivity.this,Bitcoin.class);

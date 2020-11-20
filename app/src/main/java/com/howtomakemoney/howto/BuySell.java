@@ -9,8 +9,12 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 public class BuySell extends AppCompatActivity {
     TextView busell,title,ff;
@@ -18,6 +22,7 @@ public class BuySell extends AppCompatActivity {
     RelativeLayout relativeLayout;
     Animation bounce,animation;
     ImageView imageView;
+    private AdView adView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,17 @@ public class BuySell extends AppCompatActivity {
         bounce = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.bounce);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
+
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         title.startAnimation(animation);
         hh.startAnimation(animation);
         busell.startAnimation(bounce);
@@ -53,6 +69,13 @@ public class BuySell extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(BuySell.this,MainActivity.class);

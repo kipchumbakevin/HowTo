@@ -8,13 +8,18 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 public class TransitionActivity extends AppCompatActivity {
     TextView title,desc,shortd;
     ImageView imageView;
     int i,t = 0;
     Animation bounce,animation;
+    private AdView adView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +28,16 @@ public class TransitionActivity extends AppCompatActivity {
         desc = findViewById(R.id.ff);
         imageView = findViewById(R.id.image);
         shortd = findViewById(R.id.buysell);
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         i = Integer.parseInt(getIntent().getExtras().getString("INTENT"));
         if (getIntent().hasExtra("GOBACK")){
             t = Integer.parseInt(getIntent().getExtras().getString("GOBACK"));
@@ -42,6 +57,13 @@ public class TransitionActivity extends AppCompatActivity {
                 goOn();
             }
         });
+    }
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 
     private void goOn() {

@@ -11,14 +11,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 public class MainActivity extends AppCompatActivity {
     RelativeLayout bitcoin;
     LinearLayoutCompat insurance,sellads,marketing,ecommerce,digitalcourse,membershipsite,directory,buysellwebsites,youtube;
     CardView share,rate;
     Animation animation;
+    private AdView adView;
     TextView nextpage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
         youtube = findViewById(R.id.youtube);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
 
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         bitcoin.startAnimation(animation);
         insurance.startAnimation(animation);
         sellads.startAnimation(animation);
@@ -181,5 +196,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Share via"));
             }
         });
+    }
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
     }
 }

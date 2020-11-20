@@ -10,19 +10,35 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MembershipSite extends AppCompatActivity {
     TextView howto,message;
+    private AdView adView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_membership_site);
         howto = findViewById(R.id.howto);
         message = findViewById(R.id.meso);
+
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         setText(getString(R.string.membership));
         howto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +60,13 @@ public class MembershipSite extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
     public void setText(final String s){
         final int[]i = new int[1];
         final int length = s.length();

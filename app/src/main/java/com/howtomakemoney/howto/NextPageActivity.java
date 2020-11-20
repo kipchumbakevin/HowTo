@@ -8,13 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
 
 public class NextPageActivity extends AppCompatActivity {
     LinearLayoutCompat sellprogramming,instagram,affiliatewebsite,resellhosting,sellyours,
             jobboard,survey,socialmedia,graphic;
     RelativeLayout websitedeveloper;
     Animation animation;
+    private AdView adView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,16 @@ public class NextPageActivity extends AppCompatActivity {
         graphic = findViewById(R.id.graphic);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
 
+        adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
+
+        // Find the Ad Container
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+
+        // Add the ad view to your activity layout
+        adContainer.addView(adView);
+
+        // Request an ad
+        adView.loadAd();
         sellprogramming.startAnimation(animation);
         websitedeveloper.startAnimation(animation);
         affiliatewebsite.startAnimation(animation);
@@ -134,6 +149,13 @@ public class NextPageActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(NextPageActivity.this,MainActivity.class);
