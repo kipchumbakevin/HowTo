@@ -51,6 +51,7 @@ public class DigitalCourse extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(DigitalCourse.this,TransitionActivity.class);
         intent.putExtra("INTENT",Integer.toString(2));
+        intent.putExtra("GOBACK",Integer.toString(2));
         startActivity(intent);
         finish();
     }

@@ -51,6 +51,7 @@ public class EcommerceActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(EcommerceActivity.this,TransitionActivity.class);
         intent.putExtra("INTENT",Integer.toString(1));
+        intent.putExtra("GOBACK",Integer.toString(2));
         startActivity(intent);
         finish();
     }

@@ -77,6 +77,7 @@ public class BuySellWebsites extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(BuySellWebsites.this, TransitionActivity.class);
         intent.putExtra("INTENT", Integer.toString(5));
+        intent.putExtra("GOBACK",Integer.toString(2));
         startActivity(intent);
         finish();
     }

@@ -52,6 +52,7 @@ public class OnlineDirectory extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(OnlineDirectory.this,TransitionActivity.class);
         intent.putExtra("INTENT",Integer.toString(4));
+        intent.putExtra("GOBACK",Integer.toString(2));
         startActivity(intent);
         finish();
     }
