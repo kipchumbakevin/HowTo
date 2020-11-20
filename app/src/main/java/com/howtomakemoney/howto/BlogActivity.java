@@ -14,6 +14,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -29,7 +30,7 @@ public class BlogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
         message = findViewById(R.id.meso);
-
+        AudienceNetworkAds.initialize(this);
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 
         // Find the Ad Container

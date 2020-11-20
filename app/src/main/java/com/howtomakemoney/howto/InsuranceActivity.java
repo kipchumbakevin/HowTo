@@ -15,6 +15,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -32,6 +33,7 @@ public class InsuranceActivity extends AppCompatActivity {
         agent = findViewById(R.id.agent);
         title = findViewById(R.id.title);
         imageView = findViewById(R.id.imageview);
+        AudienceNetworkAds.initialize(this);
 
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
         bounce = AnimationUtils.loadAnimation(getApplicationContext(),

@@ -15,6 +15,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -40,6 +41,7 @@ public class NextPageActivity extends AppCompatActivity {
         socialmedia = findViewById(R.id.socialmedia);
         graphic = findViewById(R.id.graphic);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
+        AudienceNetworkAds.initialize(this);
 
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 

@@ -15,6 +15,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -33,6 +34,7 @@ public class TransitionActivity extends AppCompatActivity {
         desc = findViewById(R.id.ff);
         imageView = findViewById(R.id.image);
         shortd = findViewById(R.id.buysell);
+        AudienceNetworkAds.initialize(this);
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 
         // Find the Ad Container

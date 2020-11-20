@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 
 public class MainActivity extends AppCompatActivity {
     RelativeLayout bitcoin;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         directory = findViewById(R.id.onlinedirectory);
         buysellwebsites = findViewById(R.id.buysellwebsites);
         youtube = findViewById(R.id.youtube);
+        AudienceNetworkAds.initialize(this);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
 
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);

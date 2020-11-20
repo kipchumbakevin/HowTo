@@ -14,6 +14,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -27,6 +28,7 @@ public class FreeBitcoinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_free_bitcoin);
         learnmore = findViewById(R.id.learnmore);
 
+        AudienceNetworkAds.initialize(this);
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 
         // Find the Ad Container

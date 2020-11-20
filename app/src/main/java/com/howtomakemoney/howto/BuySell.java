@@ -17,6 +17,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -38,6 +39,7 @@ public class BuySell extends AppCompatActivity {
         relativeLayout = findViewById(R.id.relativebit);
         imageView = findViewById(R.id.imageview);
         title = findViewById(R.id.title);
+        AudienceNetworkAds.initialize(this);
         bounce = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.bounce);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);

@@ -17,6 +17,7 @@ import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
@@ -33,6 +34,7 @@ public class BuySellWebsites extends AppCompatActivity {
         setContentView(R.layout.activity_buy_sell_websites);
         howto = findViewById(R.id.howto);
         message = findViewById(R.id.meso);
+        AudienceNetworkAds.initialize(this);
 
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 
