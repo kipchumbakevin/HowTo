@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     CardView share,rate;
     Animation animation;
     private AdView adView;
-    TextView nextpage;
+    TextView nextpage,policy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         marketing = findViewById(R.id.marketing);
         share = findViewById(R.id.share);
         rate = findViewById(R.id.rate);
+        policy = findViewById(R.id.policy);
         nextpage = findViewById(R.id.nextpage);
         ecommerce = findViewById(R.id.ecommerce);
         digitalcourse = findViewById(R.id.digitalcourse);
@@ -182,6 +183,24 @@ public class MainActivity extends AppCompatActivity {
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse("https://play.google.com/store/apps/details?id=" + MainActivity.this.getPackageName())));
+                }
+            }
+        });
+        policy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://lovidovi.co.ke/appprivacypolicy");
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                // To count with Play market backstack, After pressing back button,
+                // to taken back to our application, we need to add following flags to intent.
+                goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                        Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                        Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                try {
+                    startActivity(goToMarket);
+                } catch (ActivityNotFoundException e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://lovidovi.co.ke/appprivacypolicy")));
                 }
             }
         });
