@@ -53,7 +53,7 @@ public class AdSpaceActivity extends AppCompatActivity {
         adContainer.addView(adView);
 
         // Request an ad
-
+        adView.loadAd();
         site.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

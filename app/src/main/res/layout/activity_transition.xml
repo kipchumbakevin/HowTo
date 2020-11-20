@@ -25,7 +25,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
-        android:layout_height="match_parent">
+        app:layout_constraintBottom_toTopOf="@id/banner_container"
+        android:layout_height="0dp">
         <TextView
             android:textColor="#fff"
             android:background="@drawable/textview"
