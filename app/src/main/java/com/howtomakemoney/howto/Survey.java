@@ -49,7 +49,8 @@ public class Survey extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Survey.this,NextPageActivity.class);
+        Intent intent = new Intent(Survey.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(14));
         startActivity(intent);
         finish();
 

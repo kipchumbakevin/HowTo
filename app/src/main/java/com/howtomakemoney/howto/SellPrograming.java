@@ -49,7 +49,8 @@ public class SellPrograming extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(SellPrograming.this,NextPageActivity.class);
+        Intent intent = new Intent(SellPrograming.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(7));
         startActivity(intent);
         finish();
     }

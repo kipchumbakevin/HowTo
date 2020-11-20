@@ -49,7 +49,8 @@ public class DigitalCourse extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(DigitalCourse.this,MainActivity.class);
+        Intent intent = new Intent(DigitalCourse.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(2));
         startActivity(intent);
         finish();
     }

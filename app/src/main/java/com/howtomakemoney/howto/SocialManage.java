@@ -49,7 +49,8 @@ public class SocialManage extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(SocialManage.this,NextPageActivity.class);
+        Intent intent = new Intent(SocialManage.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(15));
         startActivity(intent);
         finish();
     }

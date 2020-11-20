@@ -50,7 +50,8 @@ public class JobBoard extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(JobBoard.this,NextPageActivity.class);
+        Intent intent = new Intent(JobBoard.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(13));
         startActivity(intent);
         finish();
     }

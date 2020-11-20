@@ -50,7 +50,8 @@ public class OnlineDirectory extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(OnlineDirectory.this,MainActivity.class);
+        Intent intent = new Intent(OnlineDirectory.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(4));
         startActivity(intent);
         finish();
     }

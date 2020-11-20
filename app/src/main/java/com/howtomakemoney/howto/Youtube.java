@@ -51,7 +51,8 @@ public class Youtube extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Youtube.this,MainActivity.class);
+        Intent intent = new Intent(Youtube.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(6));
         startActivity(intent);
         finish();
     }

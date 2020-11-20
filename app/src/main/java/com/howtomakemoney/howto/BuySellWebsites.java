@@ -16,7 +16,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class BuySellWebsites extends AppCompatActivity {
-    TextView howto,message;
+    TextView howto, message;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +46,9 @@ public class BuySellWebsites extends AppCompatActivity {
             }
         });
     }
-    public void setText(final String s){
-        final int[]i = new int[1];
+
+    public void setText(final String s) {
+        final int[] i = new int[1];
         final int length = s.length();
         @SuppressLint("HandlerLeak") final Handler handler = new Handler() {
             @Override
@@ -63,18 +65,19 @@ public class BuySellWebsites extends AppCompatActivity {
             @Override
             public void run() {
                 handler.sendEmptyMessage(0);
-                if (i[0] == length-1){
+                if (i[0] == length - 1) {
                     timer.cancel();
                 }
             }
         };
-        timer.schedule(taskEverySplitSecond,1,20);
+        timer.schedule(taskEverySplitSecond, 1, 20);
     }
 
     @Override
     public void onBackPressed() {
-                Intent intent = new Intent(BuySellWebsites.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+        Intent intent = new Intent(BuySellWebsites.this, TransitionActivity.class);
+        intent.putExtra("INTENT", Integer.toString(5));
+        startActivity(intent);
+        finish();
     }
 }

@@ -49,7 +49,8 @@ public class Graphic extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(Graphic.this,NextPageActivity.class);
+        Intent intent = new Intent(Graphic.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(16));
         startActivity(intent);
         finish();
     }

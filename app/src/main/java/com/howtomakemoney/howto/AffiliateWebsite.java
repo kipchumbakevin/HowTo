@@ -48,7 +48,8 @@ public class AffiliateWebsite extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(AffiliateWebsite.this,NextPageActivity.class);
+        Intent intent = new Intent(AffiliateWebsite.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(10));
         startActivity(intent);
         finish();
     }

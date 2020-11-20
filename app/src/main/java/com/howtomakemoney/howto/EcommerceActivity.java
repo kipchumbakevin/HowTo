@@ -49,7 +49,8 @@ public class EcommerceActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(EcommerceActivity.this,MainActivity.class);
+        Intent intent = new Intent(EcommerceActivity.this,TransitionActivity.class);
+        intent.putExtra("INTENT",Integer.toString(1));
         startActivity(intent);
         finish();
     }
