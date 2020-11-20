@@ -11,8 +11,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.facebook.ads.Ad;
+import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
+import com.facebook.ads.InterstitialAd;
+import com.facebook.ads.InterstitialAdListener;
 
 public class TransitionActivity extends AppCompatActivity {
     TextView title,desc,shortd;
@@ -20,6 +24,7 @@ public class TransitionActivity extends AppCompatActivity {
     int i,t = 0;
     Animation bounce,animation;
     private AdView adView;
+    private InterstitialAd interstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,7 @@ public class TransitionActivity extends AppCompatActivity {
 
         // Request an ad
         adView.loadAd();
+
         i = Integer.parseInt(getIntent().getExtras().getString("INTENT"));
         if (getIntent().hasExtra("GOBACK")){
             t = Integer.parseInt(getIntent().getExtras().getString("GOBACK"));
@@ -45,6 +51,59 @@ public class TransitionActivity extends AppCompatActivity {
         bounce = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.bounce);
         animation = AnimationUtils.loadAnimation(this, R.anim.heart_beat);
+        interstitialAd = new InterstitialAd(this, getString(R.string.interstitial));
+        InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
+            @Override
+            public void onInterstitialDisplayed(Ad ad) {
+                // Interstitial ad displayed callback
+                //  Log.e(TAG, "Interstitial ad displayed.");
+            }
+
+            @Override
+            public void onInterstitialDismissed(Ad ad) {
+                // Interstitial dismissed callback
+                //  Log.e(TAG, "Interstitial ad dismissed.");
+                if (t == 2){
+                    Intent intent = new Intent(TransitionActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    Intent intent = new Intent(TransitionActivity.this,NextPageActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+
+            @Override
+            public void onError(Ad ad, AdError adError) {
+                // Ad error callback
+                //Log.e(TAG, "Interstitial ad failed to load: " + adError.getErrorMessage());
+            }
+
+            @Override
+            public void onAdLoaded(Ad ad) {
+                // Interstitial ad is loaded and ready to be displayed
+                // Log.d(TAG, "Interstitial ad is loaded and ready to be displayed!");
+                // Show the ad
+                //interstitialAd.show();
+            }
+
+            @Override
+            public void onAdClicked(Ad ad) {
+                // Ad clicked callback
+                // Log.d(TAG, "Interstitial ad clicked!");
+            }
+
+            @Override
+            public void onLoggingImpression(Ad ad) {
+                // Ad impression logged callback
+                // Log.d(TAG, "Interstitial ad impression logged!");
+            }
+        };
+        interstitialAd.loadAd(
+                interstitialAd.buildLoadAdConfig()
+                        .withAdListener(interstitialAdListener)
+                        .build());
         title.startAnimation(animation);
         imageView.startAnimation(animation);
         desc.startAnimation(bounce);
@@ -62,6 +121,8 @@ public class TransitionActivity extends AppCompatActivity {
     protected void onDestroy() {
         if (adView != null) {
             adView.destroy();
+        }if (interstitialAd != null){
+            interstitialAd.destroy();
         }
         super.onDestroy();
     }
@@ -221,14 +282,18 @@ public class TransitionActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (t == 2){
-            Intent intent = new Intent(TransitionActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
+        if (interstitialAd.isAdLoaded()){
+            interstitialAd.show();
         }else {
-            Intent intent = new Intent(TransitionActivity.this,NextPageActivity.class);
-            startActivity(intent);
-            finish();
+            if (t == 2) {
+                Intent intent = new Intent(TransitionActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(TransitionActivity.this, NextPageActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }
     }
 }
