@@ -26,6 +26,7 @@ public class AdSpaceActivity extends AppCompatActivity {
     ImageView imageView;
     private AdView adView;
     private InterstitialAd interstitialAd;
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,22 +55,6 @@ public class AdSpaceActivity extends AppCompatActivity {
 
         // Request an ad
         adView.loadAd();
-        site.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AdSpaceActivity.this,WebsiteActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        blog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AdSpaceActivity.this,BlogActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
         interstitialAd = new InterstitialAd(this, getString(R.string.interstitial));
         InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
             @Override
@@ -82,9 +67,19 @@ public class AdSpaceActivity extends AppCompatActivity {
             public void onInterstitialDismissed(Ad ad) {
                 // Interstitial dismissed callback
               //  Log.e(TAG, "Interstitial ad dismissed.");
-                Intent intent = new Intent(AdSpaceActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                if (i == 1) {
+                    Intent intent = new Intent(AdSpaceActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else if (i == 2){
+                    Intent intent = new Intent(AdSpaceActivity.this, BlogActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else if (i == 3){
+                    Intent intent = new Intent(AdSpaceActivity.this, WebsiteActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
 
             @Override
@@ -117,6 +112,32 @@ public class AdSpaceActivity extends AppCompatActivity {
                 interstitialAd.buildLoadAdConfig()
                         .withAdListener(interstitialAdListener)
                         .build());
+        site.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i = 3;
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(AdSpaceActivity.this, WebsiteActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
+        blog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i = 2;
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(AdSpaceActivity.this, BlogActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
     }
     @Override
     protected void onDestroy() {
@@ -131,6 +152,7 @@ public class AdSpaceActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        i = 1;
         if (interstitialAd.isAdLoaded()){
             interstitialAd.show();
         }else {

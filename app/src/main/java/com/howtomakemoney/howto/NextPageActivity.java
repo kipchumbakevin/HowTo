@@ -26,6 +26,7 @@ public class NextPageActivity extends AppCompatActivity {
     Animation animation;
     private AdView adView;
     private InterstitialAd interstitialAd;
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,9 +66,62 @@ public class NextPageActivity extends AppCompatActivity {
             public void onInterstitialDismissed(Ad ad) {
                 // Interstitial dismissed callback
                 //  Log.e(TAG, "Interstitial ad dismissed.");
-                Intent intent = new Intent(NextPageActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                if (i == 11){
+                    Intent intent = new Intent(NextPageActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else if (i == 1){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(7));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 2){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(9));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 3){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(11));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 4){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(14));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 5){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(15));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 6){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(12));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 7){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(13));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 8){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(10));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 9){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(8));
+                    startActivity(intent);
+                    finish();
+                }else if (i == 10){
+                    Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
+                    intent.putExtra("INTENT",Integer.toString(16));
+                    startActivity(intent);
+                    finish();
+                }
             }
 
             @Override
@@ -114,6 +168,7 @@ public class NextPageActivity extends AppCompatActivity {
         sellprogramming.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 1;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(7));
                 startActivity(intent);
@@ -123,6 +178,7 @@ public class NextPageActivity extends AppCompatActivity {
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 2;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(9));
                 startActivity(intent);
@@ -132,6 +188,7 @@ public class NextPageActivity extends AppCompatActivity {
         resellhosting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 3;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(11));
                 startActivity(intent);
@@ -141,6 +198,7 @@ public class NextPageActivity extends AppCompatActivity {
         survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 4;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(14));
                 startActivity(intent);
@@ -150,6 +208,7 @@ public class NextPageActivity extends AppCompatActivity {
         socialmedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 5;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(15));
                 startActivity(intent);
@@ -159,6 +218,7 @@ public class NextPageActivity extends AppCompatActivity {
         sellyours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 6;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(12));
                 startActivity(intent);
@@ -168,6 +228,7 @@ public class NextPageActivity extends AppCompatActivity {
         jobboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 7;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(13));
                 startActivity(intent);
@@ -177,6 +238,7 @@ public class NextPageActivity extends AppCompatActivity {
         affiliatewebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 8;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(10));
                 startActivity(intent);
@@ -186,6 +248,7 @@ public class NextPageActivity extends AppCompatActivity {
         websitedeveloper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 9;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(8));
                 startActivity(intent);
@@ -195,6 +258,7 @@ public class NextPageActivity extends AppCompatActivity {
         graphic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                i = 10;
                 Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
                 intent.putExtra("INTENT",Integer.toString(16));
                 startActivity(intent);
@@ -214,6 +278,7 @@ public class NextPageActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        i = 11;
         if (interstitialAd.isAdLoaded()){
             interstitialAd.show();
         }else {

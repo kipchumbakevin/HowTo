@@ -25,6 +25,7 @@ public class MarketingActivity extends AppCompatActivity {
     Animation bounce,animation;
     private AdView adView;
     private InterstitialAd interstitialAd;
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,9 +61,19 @@ public class MarketingActivity extends AppCompatActivity {
             public void onInterstitialDismissed(Ad ad) {
                 // Interstitial dismissed callback
                 //  Log.e(TAG, "Interstitial ad dismissed.");
-                Intent intent = new Intent(MarketingActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                if (i == 1) {
+                    Intent intent = new Intent(MarketingActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else if (i == 2){
+                    Intent intent = new Intent(MarketingActivity.this, Affiliate.class);
+                    startActivity(intent);
+                    finish();
+                }else if (i == 3){
+                    Intent intent = new Intent(MarketingActivity.this, SocialMedia.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
 
             @Override
@@ -102,17 +113,27 @@ public class MarketingActivity extends AppCompatActivity {
         social.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MarketingActivity.this,SocialMedia.class);
-                startActivity(intent);
-                finish();
+                i = 3;
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(MarketingActivity.this, SocialMedia.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         affiliate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MarketingActivity.this,Affiliate.class);
-                startActivity(intent);
-                finish();
+                i = 2;
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(MarketingActivity.this, Affiliate.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
@@ -128,6 +149,7 @@ public class MarketingActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        i = 1;
         if (interstitialAd.isAdLoaded()){
             interstitialAd.show();
         }else {
