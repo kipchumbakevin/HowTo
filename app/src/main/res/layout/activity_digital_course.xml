@@ -37,6 +37,7 @@
                 android:id="@+id/meso"
                 android:drawableTop="@drawable/ic_money"
                 android:drawableBottom="@drawable/ic_money"
+                android:textAlignment="center"
                 android:drawableEnd="@drawable/ic_money"
                 android:drawableStart="@drawable/ic_money"
                 android:layout_width="match_parent"
