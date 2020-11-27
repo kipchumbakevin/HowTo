@@ -169,100 +169,140 @@ public class NextPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 i = 1;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(7));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(7));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 2;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(9));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(9));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         resellhosting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 3;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(11));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(11));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         survey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 4;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(14));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(14));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         socialmedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 5;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(15));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(15));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         sellyours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 6;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(12));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(12));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         jobboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 7;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(13));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(13));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         affiliatewebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 8;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(10));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(10));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         websitedeveloper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 9;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(8));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(8));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         graphic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i = 10;
-                Intent intent = new Intent(NextPageActivity.this,TransitionActivity.class);
-                intent.putExtra("INTENT",Integer.toString(16));
-                startActivity(intent);
-                finish();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    Intent intent = new Intent(NextPageActivity.this, TransitionActivity.class);
+                    intent.putExtra("INTENT", Integer.toString(16));
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }

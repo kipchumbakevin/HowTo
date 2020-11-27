@@ -107,7 +107,7 @@ public class Graphic extends AppCompatActivity {
         if (adView != null) {
             adView.destroy();
         }if (interstitialAd != null){
-            interstitialAd.show();
+            interstitialAd.destroy();
         }
         super.onDestroy();
     }
