@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,15 +21,23 @@ import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
 public class FreeBitcoinActivity extends AppCompatActivity {
-    TextView learnmore;
+    TextView learnmore,message;
     private AdView adView;
     private InterstitialAd interstitialAd;
+    Animation animation,bounce;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_free_bitcoin);
+        message = findViewById(R.id.meso);
         learnmore = findViewById(R.id.learnmore);
-
+        animation = AnimationUtils.loadAnimation(this,
+                R.anim.heart_beat);
+        bounce = AnimationUtils.loadAnimation
+                (getApplicationContext(),
+                        R.anim.bounce);
+        message.startAnimation(animation);
+        message.startAnimation(bounce);
         AudienceNetworkAds.initialize(this);
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 

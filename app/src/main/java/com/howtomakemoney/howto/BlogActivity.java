@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,11 +27,20 @@ public class BlogActivity extends AppCompatActivity {
     TextView message;
     private AdView adView;
     private InterstitialAd interstitialAd;
+    Animation animation,bounce;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
         message = findViewById(R.id.meso);
+
+        animation = AnimationUtils.loadAnimation(this,
+                R.anim.heart_beat);
+        bounce = AnimationUtils.loadAnimation
+                (getApplicationContext(),
+                        R.anim.bounce);
+        message.startAnimation(animation);
+        message.startAnimation(bounce);
         AudienceNetworkAds.initialize(this);
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
 
@@ -88,7 +99,6 @@ public class BlogActivity extends AppCompatActivity {
                 interstitialAd.buildLoadAdConfig()
                         .withAdListener(interstitialAdListener)
                         .build());
-        setText(getString(R.string.blog));
     }
     @Override
     protected void onDestroy() {
@@ -111,29 +121,29 @@ public class BlogActivity extends AppCompatActivity {
             finish();
         }
     }
-    public void setText(final String s){
-        final int[]i = new int[1];
-        final int length = s.length();
-        @SuppressLint("HandlerLeak") final Handler handler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                char c = s.charAt(i[0]);
-                message.append(String.valueOf(c));
-                i[0]++;
-
-            }
-        };
-        final Timer timer = new Timer();
-        TimerTask taskEverySplitSecond = new TimerTask() {
-            @Override
-            public void run() {
-                handler.sendEmptyMessage(0);
-                if (i[0] == length-1){
-                    timer.cancel();
-                }
-            }
-        };
-        timer.schedule(taskEverySplitSecond,1,20);
-    }
+//    public void setText(final String s){
+//        final int[]i = new int[1];
+//        final int length = s.length();
+//        @SuppressLint("HandlerLeak") final Handler handler = new Handler() {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                super.handleMessage(msg);
+//                char c = s.charAt(i[0]);
+//                message.append(String.valueOf(c));
+//                i[0]++;
+//
+//            }
+//        };
+//        final Timer timer = new Timer();
+//        TimerTask taskEverySplitSecond = new TimerTask() {
+//            @Override
+//            public void run() {
+//                handler.sendEmptyMessage(0);
+//                if (i[0] == length-1){
+//                    timer.cancel();
+//                }
+//            }
+//        };
+//        timer.schedule(taskEverySplitSecond,1,20);
+//    }
 }

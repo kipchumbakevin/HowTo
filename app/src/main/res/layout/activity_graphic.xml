@@ -28,18 +28,25 @@
         android:layout_height="0dp"
         android:layout_marginBottom="55dp">
 
-        <TextView
-            android:id="@+id/meso"
-            android:drawableTop="@drawable/ic_money"
-            android:drawableBottom="@drawable/ic_money"
-            android:drawableEnd="@drawable/ic_money"
-            android:drawableStart="@drawable/ic_money"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
             android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textColor="@color/colorWhite"
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/card"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/meso"
+                android:drawableTop="@drawable/ic_money"
+                android:drawableBottom="@drawable/ic_money"
+                android:drawableEnd="@drawable/ic_money"
+                android:drawableStart="@drawable/ic_money"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:text="@string/graphic"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_height="wrap_content" />
+        </androidx.cardview.widget.CardView>
     </ScrollView>
     <LinearLayout
         android:id="@+id/banner_container"

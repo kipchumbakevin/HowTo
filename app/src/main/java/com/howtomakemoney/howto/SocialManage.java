@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,12 +26,20 @@ import java.util.TimerTask;
 public class SocialManage extends AppCompatActivity {
     TextView message;
     private AdView adView;
+    Animation animation,bounce;
     private InterstitialAd interstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social_manage);
         message = findViewById(R.id.meso);
+        animation = AnimationUtils.loadAnimation(this,
+                R.anim.heart_beat);
+        bounce = AnimationUtils.loadAnimation
+                (getApplicationContext(),
+                        R.anim.bounce);
+        message.startAnimation(animation);
+        message.startAnimation(bounce);
         AudienceNetworkAds.initialize(this);
 
         adView = new AdView(this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
@@ -90,7 +100,6 @@ public class SocialManage extends AppCompatActivity {
                 interstitialAd.buildLoadAdConfig()
                         .withAdListener(interstitialAdListener)
                         .build());
-        setText(getString(R.string.socialma));
     }
     @Override
     protected void onDestroy() {
