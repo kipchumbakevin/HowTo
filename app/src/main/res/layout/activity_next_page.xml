@@ -46,20 +46,7 @@
                     android:textSize="13sp"
                     android:layout_height="wrap_content"
                     android:text="Programming"/>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/ff"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="100dp"
-                    app:cardCornerRadius="4dp"
-                    android:layout_height="100dp">
-                    <ImageView
-                        android:id="@+id/image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/sellprogramming" />
-                </androidx.cardview.widget.CardView>
+
             </androidx.appcompat.widget.LinearLayoutCompat>
             <RelativeLayout
                 android:layout_width="wrap_content"

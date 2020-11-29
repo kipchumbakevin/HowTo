@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#d4af37</color>
+    <color name="colorAccent">#ffffff</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorDot">#013036</color>
     <color name="colorPurp">#0E4601</color>
@@ -10,6 +10,7 @@
     <!--<color name="colorGray">#7E7E7E</color>-->
     <color name="colorGray">#ffffff</color>
     <color name="colorDont">#004646</color>
+    <color name="colorGold">#d4af37</color>
     <color name="colorDont1">#DCECEC</color>
     <color name="colorG">#1BCC01</color>
     <color name="colorGreen">#19AA03</color>

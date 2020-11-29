@@ -65,16 +65,11 @@ public class TransitionActivity extends AppCompatActivity {
             public void onInterstitialDismissed(Ad ad) {
                 // Interstitial dismissed callback
                 //  Log.e(TAG, "Interstitial ad dismissed.");
-                if (t == 2){
                     Intent intent = new Intent(TransitionActivity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
-                }else {
-                    Intent intent = new Intent(TransitionActivity.this,NextPageActivity.class);
-                    startActivity(intent);
-                    finish();
                 }
-            }
+
 
             @Override
             public void onError(Ad ad, AdError adError) {
@@ -287,15 +282,9 @@ public class TransitionActivity extends AppCompatActivity {
         if (interstitialAd.isAdLoaded()){
             interstitialAd.show();
         }else {
-            if (t == 2) {
                 Intent intent = new Intent(TransitionActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
-            } else {
-                Intent intent = new Intent(TransitionActivity.this, NextPageActivity.class);
-                startActivity(intent);
-                finish();
-            }
         }
     }
 }
