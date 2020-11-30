@@ -57,8 +57,6 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/websitedeveloper"
                     android:padding="2dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/linback"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +64,6 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginTop="20dp"
                         android:padding="2dp"
                         android:background="@drawable/linback"
                         app:layout_constraintStart_toStartOf="parent"

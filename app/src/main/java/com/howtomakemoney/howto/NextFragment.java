@@ -28,7 +28,6 @@ import com.facebook.ads.InterstitialAdListener;
  * A simple {@link Fragment} subclass.
  */
 public class NextFragment extends Fragment {
-
     LinearLayoutCompat sellprogramming,instagram,affiliatewebsite,resellhosting,sellyours,
             jobboard,survey,socialmedia,graphic;
     RelativeLayout websitedeveloper;

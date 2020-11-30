@@ -65,9 +65,107 @@ public class TransitionActivity extends AppCompatActivity {
             public void onInterstitialDismissed(Ad ad) {
                 // Interstitial dismissed callback
                 //  Log.e(TAG, "Interstitial ad dismissed.");
-                    Intent intent = new Intent(TransitionActivity.this,MainActivity.class);
+                if (i == 1){
+
+                        Intent intent = new Intent(TransitionActivity.this, EcommerceActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 2){
+
+                        Intent intent = new Intent(TransitionActivity.this, DigitalCourse.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 3){
+
+                        Intent intent = new Intent(TransitionActivity.this, MembershipSite.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 4){
+
+                        Intent intent = new Intent(TransitionActivity.this, OnlineDirectory.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 5){
+
+                        Intent intent = new Intent(TransitionActivity.this, BuySellWebsites.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 6){
+
+                        Intent intent = new Intent(TransitionActivity.this, Youtube.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 7){
+
+                        Intent intent = new Intent(TransitionActivity.this, SellPrograming.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 8){
+
+                        Intent intent = new Intent(TransitionActivity.this, WebDeveloper.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 9){
+
+                        Intent intent = new Intent(TransitionActivity.this, Instagram.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 10){
+
+                        Intent intent = new Intent(TransitionActivity.this, AffiliateWebsite.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 11){
+
+                        Intent intent = new Intent(TransitionActivity.this, ResellWebhosting.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 12){
+
+                        Intent intent = new Intent(TransitionActivity.this, YourServices.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 13){
+
+                        Intent intent = new Intent(TransitionActivity.this, JobBoard.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 14){
+
+                        Intent intent = new Intent(TransitionActivity.this, Survey.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 15){
+
+                        Intent intent = new Intent(TransitionActivity.this, SocialManage.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 16){
+
+                        Intent intent = new Intent(TransitionActivity.this, Graphic.class);
+                        startActivity(intent);
+                        finish();
+
+                }else if (i == 17) {
+                    Intent intent = new Intent(TransitionActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
+                }
                 }
 
 
@@ -110,7 +208,11 @@ public class TransitionActivity extends AppCompatActivity {
         shortd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goOn();
+                if (interstitialAd.isAdLoaded()){
+                    interstitialAd.show();
+                }else {
+                    goOn();
+                }
             }
         });
     }
@@ -126,69 +228,102 @@ public class TransitionActivity extends AppCompatActivity {
 
     private void goOn() {
         if (i == 1){
-            Intent intent = new Intent(TransitionActivity.this,EcommerceActivity.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, EcommerceActivity.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 2){
-            Intent intent = new Intent(TransitionActivity.this,DigitalCourse.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, DigitalCourse.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 3){
-            Intent intent = new Intent(TransitionActivity.this,MembershipSite.class);
-            startActivity(intent);
-            finish();
+            if (interstitialAd.isAdLoaded()){
+                interstitialAd.show();
+            }else {
+                Intent intent = new Intent(TransitionActivity.this, MembershipSite.class);
+                startActivity(intent);
+                finish();
+            }
         }else if (i == 4){
-            Intent intent = new Intent(TransitionActivity.this,OnlineDirectory.class);
-            startActivity(intent);
-            finish();
+                Intent intent = new Intent(TransitionActivity.this, OnlineDirectory.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 5){
-            Intent intent = new Intent(TransitionActivity.this,BuySellWebsites.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, BuySellWebsites.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 6){
-            Intent intent = new Intent(TransitionActivity.this,Youtube.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, Youtube.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 7){
-            Intent intent = new Intent(TransitionActivity.this,SellPrograming.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, SellPrograming.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 8){
-            Intent intent = new Intent(TransitionActivity.this,WebDeveloper.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, WebDeveloper.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 9){
-            Intent intent = new Intent(TransitionActivity.this,Instagram.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, Instagram.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 10){
-            Intent intent = new Intent(TransitionActivity.this,AffiliateWebsite.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, AffiliateWebsite.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 11){
-            Intent intent = new Intent(TransitionActivity.this,ResellWebhosting.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, ResellWebhosting.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 12){
-            Intent intent = new Intent(TransitionActivity.this,YourServices.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, YourServices.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 13){
-            Intent intent = new Intent(TransitionActivity.this,JobBoard.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, JobBoard.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 14){
-            Intent intent = new Intent(TransitionActivity.this,Survey.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, Survey.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 15){
-            Intent intent = new Intent(TransitionActivity.this,SocialManage.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, SocialManage.class);
+                startActivity(intent);
+                finish();
+
         }else if (i == 16){
-            Intent intent = new Intent(TransitionActivity.this,Graphic.class);
-            startActivity(intent);
-            finish();
+
+                Intent intent = new Intent(TransitionActivity.this, Graphic.class);
+                startActivity(intent);
+                finish();
+
         }
     }
 
@@ -279,6 +414,7 @@ public class TransitionActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        i=17;
         if (interstitialAd.isAdLoaded()){
             interstitialAd.show();
         }else {

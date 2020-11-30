@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     private InterstitialAd interstitialAd;
     int i = 0;
+    InterstitialAdListener interstitialAdListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +40,9 @@ public class MainActivity extends AppCompatActivity {
         tab_two = findViewById(R.id.tab_two);
         tabLayout = findViewById(R.id.tab);
 
-        loadOne();
         interstitialAd = new InterstitialAd(MainActivity.this, getString(R.string.interstitial));
 
-        final InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
+        interstitialAdListener = new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
                 // Interstitial ad displayed callback
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 interstitialAd.buildLoadAdConfig()
                         .withAdListener(interstitialAdListener)
                         .build());
+        loadOne();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -123,12 +124,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadTwo() {
+        interstitialAd.loadAd(
+                interstitialAd.buildLoadAdConfig()
+                        .withAdListener(interstitialAdListener)
+                        .build());
         NextFragment fragment = new NextFragment();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.fragments,fragment,fragment.getTag()).commit();
     }
 
     private void loadOne() {
+        interstitialAd.loadAd(
+                interstitialAd.buildLoadAdConfig()
+                        .withAdListener(interstitialAdListener)
+                        .build());
         MainFragment fragment = new MainFragment();
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.fragments,fragment,fragment.getTag()).commit();
